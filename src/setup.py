@@ -7,7 +7,7 @@
 
 from setuptools import setup, find_packages
 
-with open('kayako/README.txt') as readme:
+with open('kayako/README.md') as readme:
     long_description = readme.read()
 
 setup(
