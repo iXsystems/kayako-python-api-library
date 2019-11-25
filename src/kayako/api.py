@@ -380,6 +380,8 @@ class KayakoAPI(object):
             return str(int(time.mktime(parameter.timetuple())))
         elif isinstance(parameter, (list, tuple, set)):
             return [self._sanitize_parameter(item) for item in parameter if item not in ['', None]]
+        elif isinstance(parameter, unicode):
+            return parameter.encode('utf-8', 'ignore')
         else:
             return str(parameter)
 
